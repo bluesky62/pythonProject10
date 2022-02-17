@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['SECRECT_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["blue.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["blue12.herokuapp.com", "localhost"]
 
 # Application definition
 
@@ -55,7 +55,7 @@ ROOT_URLCONF = 'blue.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
