@@ -22,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 import os
 SECRET_KEY = os.environ['SECRECT_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["blue12.herokuapp.com", "localhost"]
 # ALLOWED_HOSTS = []
