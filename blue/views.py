@@ -1,7 +1,6 @@
 from contact.models import Contact_model
 from django.shortcuts import render
 from project.models import projectModel
-from django.views.decorators.csrf import csrf_protect
 
 
 def index(request):
@@ -32,10 +31,9 @@ def Service(request):
     return render(request, "service.html")
 
 
-@csrf_protect
+
 def Contact(request, reason=""):
     try:
-
 
         if request.method == "POST":
             name_view = request.POST.get('name')
@@ -52,6 +50,7 @@ def Contact(request, reason=""):
         pass
 
     return render(request, "contact.html")
+
 
 # @csrf_protect
 # def csrf_failure(request, ):
