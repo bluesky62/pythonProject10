@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ["blue12.herokuapp.com", "localhost"]
 # ALLOWED_HOSTS = []
 
 
-CSRF_FAILURE_VIEW = 'contact.views.csrf_failure'
+# CSRF_FAILURE_VIEW = 'contact.views.csrf_failure'
 # Application definition
 
 INSTALLED_APPS = [
