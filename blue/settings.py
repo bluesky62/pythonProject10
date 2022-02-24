@@ -29,6 +29,25 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["blue12.herokuapp.com", "localhost"]
 
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = ['https://blue12.herokuapp.com/']
+
+CORS_REPLACE_HTTPS_REFERER = True
+
+CSRF_COOKIE_DOMAIN = 'herokuapp.com'
+
+CORS_ORIGIN_WHITELIST = (
+    'https://blue12.bluemix.net/',
+    'blue12.herokuapp.com',
+    'herokuapp.com',
+)
+
+
 # ALLOWED_HOSTS = []
 
 
@@ -131,10 +150,3 @@ SATIC_ROOT = BASE_DIR / 'static'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOW_CREDENTIALS = True
-
-CORS_ORIGIN_ALLOW_ALL = True
-
-CORS_ALLOW_CREDENTIALS = True
-
-CSRF_TRUSTED_ORIGINS = ['https://blue12.herokuapp.com/']
