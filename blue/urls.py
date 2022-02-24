@@ -26,7 +26,6 @@ urlpatterns = [
     path("about/", views.About),
     path("services/", views.Service),
     path("contact/", views.Contact, name='Contact'),
-    # path("csrf_failure/", views.csrf_failure),
     path("project_delivered/", views.projectFuc)
 
 ]
