@@ -1,6 +1,7 @@
 from contact.models import Contact_model
 from django.shortcuts import render
 from project.models import projectModel
+from django.views.decorators.csrf import csrf_protect
 
 
 def index(request):
@@ -31,6 +32,7 @@ def Service(request):
     return render(request, "service.html")
 
 
+@csrf_protect
 def Contact(request):
     try:
 
@@ -54,5 +56,3 @@ def projectFuc(request):
         'project_data': projectData
     }
     return render(request, "project delivered.html", data)
-
-

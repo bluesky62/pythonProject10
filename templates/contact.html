@@ -15,7 +15,7 @@
 
                     <!-- Contact Form -->
                     <form action="{% url 'Contact' %}" method="post">
-                        {% csrf_token %}
+                       {% csrf_token %}
                         <div class="form-group">
                             <input class="form-control-input" id="cname" name="name" required type="text">
                             <label class="label-control" for="cname" >Name</label>
