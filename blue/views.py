@@ -45,6 +45,7 @@ def Contact(request, reason=""):
             n.save()
             ctx = {
                 'message': 'some custom messages'
+            }
 
             return render(request, "contact.html", ctx)
     except:
