@@ -31,7 +31,6 @@ def Service(request):
     return render(request, "service.html")
 
 
-
 def Contact(request, reason=""):
     try:
 
@@ -41,23 +40,12 @@ def Contact(request, reason=""):
             project_view = request.POST.get('project_details')
             n = Contact_model(name=name_view, email=email_view, project_details=project_view)
             n.save()
-            ctx = {
-                'message': 'some custom messages'
-            }
 
-            return render(request, "contact.html", ctx)
+            return render(request, "contact.html")
     except:
         pass
 
     return render(request, "contact.html")
-
-
-# @csrf_protect
-# def csrf_failure(request, ):
-#     ctx = {
-#         'message': 'some custom messages'
-#     }
-#     return render(request, "403_csrf.html", ctx)
 
 
 def projectFuc(request):
