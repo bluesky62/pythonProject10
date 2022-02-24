@@ -49,7 +49,7 @@ def Contact(request):
 
     return render(request, "contact.html")
 
-
+@csrf_protect
 def csrf_failure(request, reason=""):
     ctx = {
         'message': 'some custom messages'
