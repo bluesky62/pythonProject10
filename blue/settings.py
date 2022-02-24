@@ -29,7 +29,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["blue12.herokuapp.com", "localhost"]
 
-
 # ALLOWED_HOSTS = []
 
 
@@ -131,3 +130,11 @@ SATIC_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ORIGIN_ALLOW_ALL = True
+
+CORS_ALLOW_CREDENTIALS = True
+
+CSRF_TRUSTED_ORIGINS = ['https://blue12.herokuapp.com/']
