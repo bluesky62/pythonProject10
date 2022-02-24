@@ -50,6 +50,13 @@ def Contact(request):
     return render(request, "contact.html")
 
 
+def csrf_failure(request, reason=""):
+    ctx = {
+        'message': 'some custom messages'
+    }
+    return render(request, "403_csrf.html", ctx)
+
+
 def projectFuc(request):
     projectData = projectModel.objects.all()
     data = {
