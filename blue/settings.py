@@ -26,7 +26,7 @@ SECRET_KEY = os.environ['SECRECT_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
+# ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ["blue12.herokuapp.com", "localhost"]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -42,7 +42,7 @@ CORS_REPLACE_HTTPS_REFERER = True
 CSRF_COOKIE_DOMAIN = 'herokuapp.com'
 
 CORS_ORIGIN_WHITELIST = (
-    'https://blue12.bluemix.net/',
+    'https://blue12.herokuapp.com',
     'blue12.herokuapp.com',
     'herokuapp.com',
 )
@@ -143,7 +143,7 @@ STATIC_FILE_ROOT = os.path.join(BASE_DIR, "static")
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
-SATIC_ROOT = BASE_DIR / 'static'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
